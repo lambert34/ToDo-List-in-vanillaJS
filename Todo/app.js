@@ -22,7 +22,7 @@ function displayMessages(){
     todoList.forEach(function(item, i){
     displayMessage += `
     <li>
-    <input type='checkbox' id='item_${i}'>
+    <input type='checkbox' id='item_${i}' ${item.checked ? 1 : 2}>
     <label for='item_${i}'>${item.todo}</label>
     </li>
     `;
