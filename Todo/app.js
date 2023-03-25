@@ -1,5 +1,6 @@
 let addMessage = document.querySelector('.message'),
 addButton = document.querySelector('.add');
+todo = document.querySelector('.todo');
 
 let todoList = [];
 
@@ -12,6 +13,11 @@ addButton.addEventListener('click', function(){
     };
 
     todoList.push(newTodo);
-
-    console.log(newTodo);
 });
+
+function displayMessages(){
+
+    todoList.forEach(function(item, i){
+
+    });
+}
