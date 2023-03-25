@@ -48,9 +48,13 @@ function displayMessages(){
 
     todo.addEventListener('contextmenu', function(event){
         event.preventDefault();
-        todoList.forEach(function(item){
+        todoList.forEach(function(item, i){
             if (item.todo === event.target.innerHTML){
-                item.important = !item.important;
+                if (event.ctrlKey || event.metaKey){
+                    todoList.splice(i, 1)
+                } else{
+                    item.important = !item.important;
+                }
                 displayMessages();
                 localStorage.setItem('todo', JSON.stringify(todoList));
             }
